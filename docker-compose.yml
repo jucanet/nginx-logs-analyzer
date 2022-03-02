@@ -1,0 +1,13 @@
+version: '3'
+services:
+  nginx-logs-analizer-frontend:
+    image: nginx_logs_analyzer_front:latest
+    build: .
+    container_name: analyzer_frontend
+    ports:
+      - "3001:80"
+
+networks:
+  default:
+    external:
+      name: nginxlogsanalyzer-net
